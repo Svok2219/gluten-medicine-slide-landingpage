@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Animate Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <style>
+ 
+    .right-side {
+      overflow: hidden; /* Hide overflow to remove padding/margin effect */
+    }
+
+    /* Add CSS for animation */
+    @keyframes slideIn {
+      from {
+        margin-left: 100%; /* Start off-screen */
+      }
+      to {
+        margin-left: 0; /* Slide in to 0% margin, visible on the screen */
+      }
+    }
+
+    .right-side img {
+      animation: slideIn 0.1s ease; /* Apply animation to the image */
+    }
+
+
+    
+/* Add CSS for smooth transition */
+.right-side {
+  display: flex; /* Use flex to avoid gaps/margins */
+  overflow: hidden; /* Hide overflow to remove padding/margin effect */
+}
+
+/* Add CSS for animation */
+@keyframes slideIn {
+  from {
+    margin-left: 100%; /* Start off-screen */
+  }
+  to {
+    margin-left: 0; /* Slide in to 0% margin, visible on the screen */
+  }
+}
+
+.right-side img {
+  animation: slideIn 0.5s ease; /* Apply animation to the image */
+  object-fit: cover; /* Ensure the image fills the container without gaps */
+}
+
+
+
+
+*
+
+main {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container .left-side {
+  z-index: 999;
+  text-align: right;
+  flex: 1;
+  padding: 20px;
+  max-width: 530px;
+}
+
+.container .left-side h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.container .left-side h1 .green {
+  color: #F4AACA;
+  font-family: 'Viga', serif;
+}
+
+.container .left-side p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.container .left-side a {
+  display: inline-block;
+  background: green;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 25px;
+  color: white;
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.container .right-side {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  /* padding: 20px; */
+  max-width: 1000px;
+}
+
+.container .right-side {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0; /* Remove padding */
+}
+
+
+
+
+.container .right-side img {
+  width: 200%;
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thumb a:hover {
+  margin-top: -15px;
+  transition: 0.2s;
+}
+
+.thumb img {
+  width: 45px;
+  margin: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1140px) {
+  .container .left-side h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .left-side h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container .left-side,
+  .container .right-side {
+    text-align: center;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .container .right-side {
+    position: relative;
+    padding: 20px;
+  }
+
+  .thumb {
+    margin-top: 30px;
+  }
+
+  .thumb img {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .container .right-side img {
+    margin-top: 0;
+  }
+}
+
+
+
+    /* For devices with a screen width of 768px or less (Tablets and mobile phones) */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center; /* Center the items horizontally */
+      }
+
+      .container .left-side,
+      .container .right-side {
+        text-align: center;
+      }
+
+      .container .left-side h1 {
+        font-size: 32px;
+      }
+
+      .container .right-side img {
+        width: 100%;
+      }
+    }
+
+    /* For devices with a screen width of 650px or less (Mobile phones in portrait mode) */
+    @media screen and (max-width: 650px) {
+      .container .left-side h1 {
+        font-size: 28px;
+      }
+
+      .thumb img {
+        width: 30px;
+      }
+    }
+
+    /* For devices with a screen width of 404px or less (Small mobile phones in portrait mode) */
+    @media screen and (max-width: 404px) {
+      .container .right-side img {
+        margin-top: 0;
+      }
+    }
+
+
+    .container .right-side img {
+        width: 100%;
+      }
+
+      .container .right-side {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        display: flex; /* Add display flex to avoid gaps */
+        justify-content: flex-end; /* Align the image to the right */
+        align-items: flex-end; /* Align the image to the bottom */
+      }
+    
+    </style>
+  </head>
+  <main>
+
+
+    <div class="container">
+
+      <div class="left-side">
+        <h1>It's not just Books <br>
+          It's <span class = "green"> ShreeBooks </span>
+        </h1>
+  
+      </div>
+      <div class="right-side">
+        <img src="" alt="" class = "starbucks">
+   
+      </div>
+    </div>
+
+
+
+    <script>
+    // Your existing JavaScript code
+
+    function imgSlider(anything, something) {
+      var starbucksImage = document.querySelector('.starbucks');
+      var rightSide = document.querySelector('.right-side');
+      var title = document.querySelector('.green');
+
+      // Fade out the right-side container
+      rightSide.style.opacity = 0;
+
+      // Wait for a short duration for the fade out to complete
+      setTimeout(function() {
+        // Change the image and background color
+        starbucksImage.src = anything;
+        // rightSide.style.backgroundColor = something;
+        title.style.color = something;
+
+        // Fade in the right-side container
+        rightSide.style.opacity = 1;
+      }, 0); // 500ms = 0.5s transition duration
+    }
+
+    // Auto-loading function with smooth transitions
+    var images = ['img/img1.png', 'img/img2.png', 'img/img3.png'];
+    var colors = ['#F4AACA', '#EA5143', '#24AE84'];
+    var currentImageIndex = 0;
+
+    function autoLoadImages() {
+      imgSlider(images[currentImageIndex], colors[currentImageIndex]);
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+             
+      // Repeat the auto-loading function every 3 seconds (3000ms)
+      setTimeout(autoLoadImages, 3000);
+    }
+
+    // Start auto-loading function
+    autoLoadImages();
+    </script>
+  </main>
+</html>
